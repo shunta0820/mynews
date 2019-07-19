@@ -1,17 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
-
+namespace app\Http\Controllers\Admin;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use app\Http\Controllers\Controller;
 
-use App/News;
+use app\News;
+
 class NewsController extends Controller
 {
   public function add()
   {
-    return view('admin.news.create');
+      return view('admin.news.create');
   }
+
   public function create(Request $request)
   {
     $this->validate($request, News::$rules);
@@ -19,11 +20,11 @@ class NewsController extends Controller
       $news = new News;
       $form = $request->all();
       
-      if(isset($form['image'])){
+      if (isset($form['image'])) {
         $path = $request->file('image')->store('public/image');
         $news->image_path = basename($path);
       } else {
-        $news->image_path = null;
+          $news->image_path = null;
       }
       unset($form['_token']);
       unset($form['image']);
@@ -33,17 +34,6 @@ class NewsController extends Controller
 
       return redirect('admin/news/create');
   }
-}
-
-class NewsController extends Controller
-{
-  public function add (){
-    return view('admin.news.create');
-  }
-  public function create(Request $request)
-  {
-      return redirect('admin/news/create');
-  }  
 }
 ?>
 
