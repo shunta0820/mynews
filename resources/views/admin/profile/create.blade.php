@@ -43,7 +43,7 @@
                     <div class ="form-group row">
                         <label class ="col-md-2" for="title">自己紹介</label>
                         <div class="col-md-2">
-                            <textarea type="form-control" name="title" rows="20">{{old('title')}}</textarea>
+                            <textarea type="form-control" name="title" rows="10">{{old('title')}}</textarea>
                         </div>
                     </div>
                     
