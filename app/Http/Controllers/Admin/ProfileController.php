@@ -25,5 +25,21 @@ class ProfileController extends Controller
  {
  return redirect('admin/profile/edit');
  }
+ public function create(Request $request)
+  {
+ 
+    $this->validate($request, profile::$rules);
+
+      $news = new profile;
+      $form = $request->all();
+      unset($form['_token']);
+
+      unset($form['image']);
+
+
+      $profile->fill($form);
+      $profile->save();
+  }
+  
 }
 ?>
