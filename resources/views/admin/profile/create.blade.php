@@ -25,13 +25,13 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="body">男</label>
                         <div class="col-md-10">
-                            <input class="radio" name="body">{{ old('body') }}
+                            <input type="radio" name="body">{{ old('body') }}
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="body">女</label>
                         <div class="col-md-10">
-                            <input class="radio" name="body">{{ old('body') }}
+                            <input type="radio" name="body">{{ old('body') }}
                         </div>
                     </div>
                     <div class="form-group row">
@@ -46,7 +46,8 @@
                             <textarea type="form-control" name="title" rows="10">{{old('title')}}</textarea>
                         </div>
                     </div>
-                    
+                    {{ csrf_field() }}
+                    <input type="submit" class="btn btn-primary" value="投稿">
                     
        </form>
      </div>
