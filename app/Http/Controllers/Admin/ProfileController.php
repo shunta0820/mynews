@@ -11,7 +11,7 @@ class ProfileController extends Controller
   {
       return view('admin.profile.create');
   }
-
+  
  
 
  public function edit()
