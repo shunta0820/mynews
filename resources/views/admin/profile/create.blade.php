@@ -18,32 +18,32 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="body">氏名</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="body" value="{{ old('body') }}">
+                            <input type="text" class="form-control" name="name" value="{{ old('name') }}">
                         </div>
                     </div>
                     <h3>性別</h3>
                     <div class="form-group row">
                         <label class="col-md-2" for="body">男</label>
                         <div class="col-md-10">
-                            <input type="radio" name="body">{{ old('body') }}
+                            <input type="radio" name="gender">{{ old('gender') }}
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="body">女</label>
                         <div class="col-md-10">
-                            <input type="radio" name="body">{{ old('body') }}
+                            <input type="radio" name="gender">{{ old('gender') }}
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="title">趣味</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="title" value="{{ old('title') }}">
+                            <input type="text" class="form-control" name="hobby" value="{{ old('hobby') }}">
                         </div>
                     </div>
                     <div class ="form-group row">
                         <label class ="col-md-2" for="title">自己紹介</label>
                         <div class="col-md-2">
-                            <textarea type="form-control" name="title" rows="10">{{old('title')}}</textarea>
+                            <textarea type="form-control" name="introduction" rows="10">{{old('introduction')}}</textarea>
                         </div>
                     </div>
                     {{ csrf_field() }}
